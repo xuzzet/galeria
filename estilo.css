@@ -1,0 +1,196 @@
+body {
+  background-color: #232323;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #343a40;
+  margin-top: 20px;
+}
+
+
+/* Barra de navegação */
+.navbar {
+  background-color: #343a40;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #ced4da;
+}
+
+/* Adicione um estilo para o novo contêiner individual */
+.photo-container {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #343a40;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.photo-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.photo-container img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* Adicione um estilo para o contêiner de fundo */
+.gallery-background {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adicione estilos para o texto dentro do contêiner */
+.photo-container h2 {
+  font-size: 14px;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* Estilize o título na modal */
+#explanation-title {
+  font-size: 24px;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+/* Estilize o botão de fechar na modal */
+.close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #343a40;
+}
+
+.close-modal-btn:hover {
+  color: #495057;
+}
+
+/* Adicione estilos para a seção de adicionar foto */
+.add-photo-section {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-photo-section h1 {
+  color: #343a40;
+}
+
+.add-photo-section form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: auto;
+}
+
+.add-photo-section label {
+  margin-top: 10px;
+}
+
+.add-photo-section input,
+.add-photo-section textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.add-photo-section button {
+  background-color: #343a40;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.add-photo-section button:hover {
+  background-color: #495057;
+}
+
+.photo-container img.zoomed {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 9999;
+  cursor: pointer;
+}
+/* Adicione um estilo para a imagem ampliada */
+.photo-container img.zoomed {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+/* Adicione um estilo para fechar a imagem ampliada */
+.photo-container img.zoomed:hover {
+  opacity: 0.8;
+}
+
+/* Adicione um estilo para o corpo quando a imagem é ampliada */
+body.zoomed {
+  overflow: hidden;
+}

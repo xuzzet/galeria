@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="estilo.css" rel="stylesheet" type="text/css">
+    <title>Memorial para meu gato Tino</title>
+</head>
+
+<body onclick="closeZoomedImage()">
+   
+      
+    <!-- Barra de navegação -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#adicionar-foto">Adicionar Foto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Container principal para a galeria -->
+    <section id="galeria" class="gallery-container">
+
+        <!-- Contêiner que envolve o título e a grade -->
+        <div class="gallery-background">
+
+            <!-- Título da galeria -->
+            <h1>Galeria de Fotos do Tino</h1>
+
+            <!-- Adicione uma div para cada linha de contêineres -->
+            <div class="grid-container" onclick="zoomImage(event)">
+
+                <!-- Primeira foto com função de clique para mostrar explicação -->
+                <div class="photo-container">
+                    <h2>Foto 1: Primeira imagem dele</h2>
+                    <img src="WhatsApp Image 2024-02-02 at 21.44.46.jpeg" alt="Uma fotinha do meu querido gato">
+                </div>
+
+                <!-- Segunda foto com função de clique para mostrar explicação -->
+                <div class="photo-container">
+                    <h2>Foto 2: Segunda foto dele</h2>
+                    <img src="WhatsApp Image 2024-02-02 at 21.44.34.jpeg" alt="Outra foto dele">
+                </div>
+
+                <!-- Adicione mais contêineres conforme necessário -->
+                <div class="photo-container">
+                    <h2>Foto 3: Terceira foto dele</h2>
+                    <img src="sua-imagem-3.jpg" alt="Mais uma foto dele">
+                </div>
+
+                <!-- Mais contêineres para formar a grade -->
+                <div class="photo-container"></div>
+                <div class="photo-container"></div>
+                <div class="photo-container"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Seção para adicionar novas fotos -->
+    <section id="adicionar-foto" class="add-photo-section">
+        <h1>Adicionar Nova Foto</h1>
+        <form onsubmit="return addNewPhoto()">
+            <label for="new-photo-url">URL da Imagem:</label>
+            <input type="url" id="new-photo-url" required>
+            <label for="new-photo-description">Descrição:</label>
+            <textarea id="new-photo-description" required></textarea>
+            <button type="submit">Adicionar Foto</button>
+        </form>
+    </section>
+
+    <!-- Modal para mostrar explicação -->
+    <div id="explanation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeExplanation()">&times;</span>
+            <h2 id="explanation-title"></h2>
+            <p id="explanation-text"></p>
+            <!-- Adicione um botão de fechar na modal -->
+            <span class="close-modal-btn" onclick="closeExplanation()">&times;</span>
+        </div>
+    </div>
+
+    <!-- Script JavaScript para funcionalidade de clique -->
+    <script src="script.js"></script>
+</body>
+
+</html>
